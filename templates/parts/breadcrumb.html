@@ -1,4 +1,7 @@
-{% if page %}
+{% if section %}
+{% set page = section %}
+{% endif %}
+{% if page.ancestors %}
 <nav aria-label="breadcrumb" class="w-100 pt-2">
   <ol class="breadcrumb">
     {% for parent in page.ancestors %}
