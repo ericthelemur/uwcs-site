@@ -3,13 +3,31 @@
 {% block content %}
 {{ section.content | safe}}
 
-{% if section.pages %}
+<!-- Paginated -->
+{% if paginator %}
+<div class="posts p-2">
+    {% for page in paginator.pages %}
+      <div class="card w-100 mb-3">
+        <div class="card-body">
+          <h5 class="card-title">{{ page.title }}</h5>
+          {% if page.summary %}
+          <p class="card-text">{{ page.summary | safe}}</p>
+          {% else %}
+          <p class="card-text">{{ page.content | striptags | truncate(length=200) }}</p>
+          {% endif %}
+          <a href="{{ page.permalink }}" class="card-link">Read more >></a>
+        </div>
+      </div>
+    {% endfor %}
+</div>
+
+<!-- Basic page link list -->
+{% elif section.pages %}
 <div id="links">
-    <h3>Pages</h3>
     <ul>
-        {% for page in section.pages %}
+      {% for page in section.pages %}
         <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
-        {% endfor %}
+      {% endfor %}
     </ul>
 </div>
 {% endif %}
