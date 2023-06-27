@@ -1,16 +1,21 @@
+<!-- Hacky way for this to work on sections and pages -->
 {% if section %}
 {% set page = section %}
 {% endif %}
+
+<!-- Don't trigger on top level -->
 {% if page.ancestors | length > 1 %}
 <nav aria-label="breadcrumb" class="w-100 pt-2">
   <ol class="breadcrumb">
+    <!-- Generate for each ancestor -->
     {% for parent in page.ancestors %}
-      {% if not loop.first %}
+      {% if not loop.first %} <!-- Ignore first -->
         {% set s = get_section(path=parent, include_pages=false) %}
-        <li class="breadcrumb-item"><a href="{{ s.permalink | safe }}">{{ s.title }}</a></li>
+        <li class="breadcrumb-item"><a href="{{ s.permalink | safe }}">{{ s.title | truncate(length=25) }}</a></li>
       {% endif %}
     {% endfor %}
-    <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
+    <!-- Include actual page -->
+    <li class="breadcrumb-item active" aria-current="page">{{ page.title | truncate(length=25)}}</li>
   </ol>
 </nav>
 {% endif %}

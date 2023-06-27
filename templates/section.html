@@ -3,19 +3,21 @@
 {% block content %}
 {{ section.content | safe}}
 
+<!-- Use paginator pages if exists -->
 {% if paginator %}
 {% set pages = paginator.pages %}
 {% elif section.pages %}
 {% set pages = section.pages %}
 {% endif %}
 
-<!-- Paginated -->
 <div class="posts p-2">
     {% for page in pages %}
+      <!-- Card for each page -->
       <div class="card w-100 mb-3">
         <div class="card-body">
           <h5 class="card-title">{{ page.title }}</h5>
           <h6 class="card-subtitle mb-2 text-body-secondary">{{ page.date | date(format="%d %B %Y") }} </h6>
+          <!-- Use summary if exists, otherwise truncate contents -->
           {% if page.summary %}
           <p class="card-text">{{ page.summary | striptags}}</p>
           {% else %}
