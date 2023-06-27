@@ -3,10 +3,15 @@
 {% block content %}
 {{ section.content | safe}}
 
-<!-- Paginated -->
 {% if paginator %}
+{% set pages = paginator.pages %}
+{% elif section.pages %}
+{% set pages = section.pages %}
+{% endif %}
+
+<!-- Paginated -->
 <div class="posts p-2">
-    {% for page in paginator.pages %}
+    {% for page in pages %}
       <div class="card w-100 mb-3">
         <div class="card-body">
           <h5 class="card-title">{{ page.title }}</h5>
@@ -21,14 +26,4 @@
     {% endfor %}
 </div>
 
-<!-- Basic page link list -->
-{% elif section.pages %}
-<div id="links">
-    <ul>
-      {% for page in section.pages %}
-        <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
-      {% endfor %}
-    </ul>
-</div>
-{% endif %}
 {% endblock content%}
