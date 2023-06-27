@@ -1,0 +1,13 @@
+{% if page %}
+<nav aria-label="breadcrumb" class="w-100 pt-2">
+  <ol class="breadcrumb">
+    {% for parent in page.ancestors %}
+      {% if not loop.first %}
+        {% set s = get_section(path=parent, include_pages=false) %}
+        <li class="breadcrumb-item"><a href="{{ s.permalink | safe }}">{{ s.title }}</a></li>
+      {% endif %}
+    {% endfor %}
+    <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
+  </ol>
+</nav>
+{% endif %}

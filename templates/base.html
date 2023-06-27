@@ -18,28 +18,15 @@
 <body>
   <div class="container min-vh-100 d-flex flex-column align-items-center">
     {% include "parts/nav.html" %}
+    <div class="w-100 px-1">
+      {% include "parts/breadcrumb.html" %}
 
-    <article id="content" class="w-100 my-5">
-      {% block content %}{% endblock %}
-    </article>
-
-    <footer class="w-100 mt-auto d-flex flex-wrap justify-content-between gap-2 py-3 mt-4 border-top">
-      <a class="d-flex text-decoration-none" href="https://uwcs.co.uk">
-        {% include "parts/uwcs_logo.html" %}
-      </a>
-      <ul class="nav justify-content-end list-unstyled d-flex">
-        <li class="ms-3">
-          <a class="text-muted" href="https://github.com/uwcs"><i class="bi-github"
-              aria-hidden="true"></i></a>
-        </li>
-        <li class="ms-3">
-          <a class="text-muted" href="https://discord.uwcs.co.uk"><i class="bi-discord" aria-hidden="true"></i></a>
-        </li>
-        <li class="ms-3">
-          <a class="text-muted" href="https://uwcs.co.uk"><i class="bi-globe" aria-hidden="true"></i></a>
-        </li>
-      </ul>
-    </footer>
+      <article id="content" class="w-100 my-4">
+        {% block header %}<h1>{% if page %} {{ page.title | safe }} {% elif section %} {{ section.title | safe }} {% endif %} </h1>{% endblock %}
+        {% block content %}{% endblock %}
+      </article>
+    </div>
+    {% include "parts/footer.html" %}
   </div>
 </body>
 
