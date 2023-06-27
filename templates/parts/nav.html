@@ -1,0 +1,32 @@
+<nav class="w-100 navbar navbar-expand-lg rounded-bottom bg-primary-subtle" style="min-width: fit-content">
+    <div class="container-fluid align-items-center">
+      
+        <!-- UWCS Logo -->
+      <a class="navbar-brand" href="/">
+        {% include "parts/uwcs_logo.html" %}
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03"
+        aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor03">
+        <ul class="navbar-nav d-flex w-100">
+          
+          <!-- Include links to top level sections -->
+          {% set sect = get_section(path='_index.md') %}
+          {% for sub in sect.subsections %}
+          {% set subsect = get_section(path=sub) %}
+          <li><a class="nav-link" href="{{ subsect.permalink | safe }}">{{ subsect.title }}</a></li>
+          {% endfor %}
+
+          <div class="vr ms-md-auto d-none d-lg-block "></div>
+          <li class="nav-item ms-lg-2">
+            <a id="dark-mode" class="nav-link ml-1" href="#">
+              <i class="bi-moon-fill"></i>
+              <span class="d-lg-none ms-2 ms-lg-0">Toggle Dark Mode</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
