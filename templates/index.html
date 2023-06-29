@@ -1,42 +1,4 @@
 {% extends "base.html" %}
 {% block title %}{{ section.title }}{% endblock title %}
-{% block content %}
-
-<div id="hero" class="w-100">
-<svg class="w-100" width="1300" height="853" viewBox="0 0 1300 853" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<image x="-43.5" y="-124" width="273" height="273" href="assets/circles/Talk.png"/>
-<image x="426.5" y="-1.5" width="484" height="258" href="assets/circles/Crowd Pizza.png"/>
-<image x="901.5" y="95" width="210" height="210" href="assets/circles/VR.png"/>
-<image x="225.5" y="58" width="190" height="190" href="assets/circles/WC BBQ.png"/>
-<image x="1144.5" y="33" width="176" height="176" href="assets/circles/Speaker Joey.png"/>
-<image x="70.5" y="182" width="149" height="149" href="assets/circles/Audience MS.png"/>
-<image x="1101.5" y="247" width="194" height="195" href="assets/circles/Laptop.png"/>
-<image x="29" y="361" width="168" height="168" href="assets/circles/Coding.png"/>
-<image x="1130.5" y="622" width="137" height="137" href="assets/circles/Goose.png"/>
-<image x="230.5" y="483" width="137" height="137" href="assets/circles/Discord.png"/>
-<image x="632.5" y="507" width="287" height="287" href="assets/circles/Talk Git Good.png"/>
-<image x="943.5" y="427" width="216" height="216" href="assets/circles/Laptop Group Close.png"/>
-<image x="25.2832" y="559" width="200" height="200" href="assets/circles/Bletchley.png"/>
-<image x="400.5" y="498" width="199" height="199" href="assets/circles/Speaker Tomas.png"/>
-<image x="941.5" y="659" width="157" height="157" href="assets/circles/Rev Sesh.png"/>
-<image x="242.5" y="643" width="167" height="167" href="assets/circles/Duck Table.png"/>
-<svg x="250" y="318" width="770" height="153" viewBox="0 0 770 153" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M57.5024 41.506C53.3998 41.506 49.3895 40.2895 45.9784 38.0102C42.5672 35.731 39.9086 32.4915 38.3387 28.7012C36.7687 24.911 36.3579 20.7404 37.1583 16.7167C37.9586 12.693 39.9342 8.99705 42.8351 6.09614C45.736 3.19523 49.432 1.21968 53.4557 0.419324C57.4793 -0.381035 61.65 0.0297436 65.4402 1.5997C69.2304 3.16966 72.47 5.8283 74.7492 9.2394C77.0285 12.6505 78.245 16.6609 78.245 20.7634C78.2403 26.2632 76.0534 31.5364 72.1644 35.4254C68.2754 39.3144 63.0022 41.5013 57.5024 41.506V41.506Z" fill="#FFC700"/>
-    <path d="M21.4663 77.7204C32.9221 77.7204 42.2089 68.4336 42.2089 56.9777C42.2089 45.5219 32.9221 36.2351 21.4663 36.2351C10.0104 36.2351 0.723633 45.5219 0.723633 56.9777C0.723633 68.4336 10.0104 77.7204 21.4663 77.7204Z" fill="#FFC700"/>
-    <path d="M57.5023 115.651C68.9582 115.651 78.245 106.364 78.245 94.9082C78.245 83.4523 68.9582 74.1655 57.5023 74.1655C46.0465 74.1655 36.7597 83.4523 36.7597 94.9082C36.7597 106.364 46.0465 115.651 57.5023 115.651Z" fill="#3A7DFF"/>
-    <path d="M93.9136 152.062C105.369 152.062 114.656 142.775 114.656 131.319C114.656 119.864 105.369 110.577 93.9136 110.577C82.4578 110.577 73.171 119.864 73.171 131.319C73.171 142.775 82.4578 152.062 93.9136 152.062Z" fill="#3A7DFF"/>
-    <text fill="white" xml:space="preserve" style="white-space: pre" font-family="Montserrat" font-size="55.5465" font-weight="600" letter-spacing="0em"><tspan x="142.923" y="62.2662">University of Warwick&#10;</tspan></text>
-    <text fill="white" xml:space="preserve" style="white-space: pre" font-family="Montserrat" font-size="55.5465" font-weight="bold" letter-spacing="0em"><tspan x="142.923" y="130.266">Computing Society</tspan></text>
-    </svg>
-</svg>
-</div>
-
-<div class="d-flex flex-column align-items-center">
-<img class="w-100" src="assets/dividers/top-oval.svg">
-<div class="w-100 d-flex flex-column align-items-center" style="background-color: #3A7DFF">
-    <h1>Hello, World! Here's what we do:</h1>
-</div>
-<img class="w-100" src="assets/dividers/bottom-oval.svg">
-</div>  
-
-{% endblock content%}
+{% block header %}{% endblock header %}
+{% block content %}{{ section.content | safe}}{% endblock content%}
