@@ -7,26 +7,39 @@
 <div class="w-100 vstack align-items-center my-5">
 <h1>Our Sponsors</h1>
 
-<div id="sponsors" class="mb-5 col-lg-10 gap-3 d-flex flex-wrap justify-content-evenly align-items-center">
+<div id="sponsors">
         
 {% set spon_sec = get_section(path="sponsors/_index.md") %}
 
+<div id="gold" class="col-lg-10 mx-auto gap-3 d-flex flex-wrap justify-content-evenly align-items-center">
 {% for sponsor in spon_sec.pages %}
-{% if sponsor.extra.tier == "Gold" or sponsor.extra.tier == "Silver" %}
+{% if sponsor.extra.tier == "Gold" %}
 <img src="{{ sponsor.extra.logo }}" style="max-height: 150px; max-width: 100%">
 {% endif %}
 {% endfor %}
 </div>
 
+<div id="silver" class="col-lg-10 mx-auto gap-3 d-flex flex-wrap justify-content-evenly align-items-center">
+{% for sponsor in spon_sec.pages %}
+{% if sponsor.extra.tier == "Silver" %}
+<img src="{{ sponsor.extra.logo }}" style="max-height: 75px; max-width: 100%">
+{% endif %}
+{% endfor %}
+</div>
+</div>
+
 <script>
-window.addEventListener('load', function () {
-    const spons = document.getElementById("sponsors")
-    for (let s of spons.children) {
-        console.log(`${s.width}x${s.height}`)
+function equalize_visual_size(elem_id, area) {
+    const elem = document.getElementById(elem_id)
+    for (let s of elem.children) {
         const h = s.height * Math.sqrt(200 * 150 / (s.width * s.height)) 
         s.style.height = `${Math.round(h)}px` 
-        console.log(h)
     }
+}
+
+window.addEventListener('load', function () {
+    equalize_visual_size("gold", 150 * 100);
+    equalize_visual_size("silver", 100 * 75);
 })
 </script>
 
