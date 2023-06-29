@@ -42,4 +42,4 @@ title = "University of Warwick Computing Society"
   </div>
   <img class="w-100" src="assets/dividers/bottom-oval.svg">
 </div>
-</div>
+
