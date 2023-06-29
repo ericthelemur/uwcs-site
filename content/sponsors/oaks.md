@@ -2,7 +2,7 @@
 title = "The Oaks | Student Roost"
 
 [extra]
-logo = "https://uwcs.co.uk/media/images/Property_1Oaks1.original.png"
+logo = "sponsors/oaks.png"
 tier = "Gold"
 +++
 

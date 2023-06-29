@@ -2,7 +2,7 @@
 title = "Nettitude"
 
 [extra]
-logo = "https://uwcs.co.uk/media/images/Nettitude_RGB.original.png"
+logo = "sponsors/nettitude.png"
 tier = "Gold"
 +++
 

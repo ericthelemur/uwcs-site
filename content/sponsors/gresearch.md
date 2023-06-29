@@ -2,7 +2,7 @@
 title = "G-Research"
 
 [extra]
-logo = "https://uwcs.co.uk/media/images/g_research.original.png"
+logo = "sponsors/gresearch.png"
 tier = "Gold"
 +++
 

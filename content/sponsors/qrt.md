@@ -2,7 +2,7 @@
 title = "Qube Research & Technologies"
 
 [extra]
-logo = "https://uwcs.co.uk/media/images/Frame_4.original.png"
+logo = "sponsors/qrt.png"
 tier = "Gold"
 +++
 

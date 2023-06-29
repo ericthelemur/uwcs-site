@@ -1,4 +1,20 @@
 {% extends "base.html" %}
 {% block title %}{{ section.title }}{% endblock title %}
 {% block header %}{% endblock header %}
-{% block content %}{{ section.content | safe}}{% endblock content%}
+{% block content %}
+{{ section.content | safe}}
+
+<div class="w-100 vstack align-items-center my-5">
+<h1>Our Sponsors</h1>
+
+<div id="sponsors" class="mb-5 col-lg-10 gap-3 d-flex flex-wrap justify-content-evenly align-items-center">
+        
+{% set spon_sec = get_section(path="sponsors/_index.md") %}
+
+{% for sponsor in spon_sec.pages %}
+{% if sponsor.extra.tier == "Gold" or sponsor.extra.tier == "Silver" %}
+<img src="{{ sponsor.extra.logo }}" style="max-height: 150px; max-width: 100%">
+{% endif %}
+{% endfor %}
+</div>
+
