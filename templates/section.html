@@ -10,13 +10,16 @@
 {% set pages = section.pages %}
 {% endif %}
 
+{% if pages %}
 <div class="posts p-2">
     {% for page in pages %}
       <!-- Card for each page -->
       <div class="card w-100 mb-3">
         <div class="card-body">
           <h5 class="card-title">{{ page.title }}</h5>
+          {% if page.date %}
           <h6 class="card-subtitle mb-2 text-body-secondary">{{ page.date | date(format="%d %B %Y") }} </h6>
+          {% endif %}
           <!-- Use summary if exists, otherwise truncate contents -->
           {% if page.summary %}
           <p class="card-text">{{ page.summary | striptags }}</p>
@@ -28,5 +31,6 @@
       </div>
     {% endfor %}
 </div>
+{%endif%}
 
 {% endblock content%}
