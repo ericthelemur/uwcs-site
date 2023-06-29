@@ -6,7 +6,7 @@ title = "University of Warwick Computing Society"
 
 <!-- Unfortunately, Zola doesn't allow nested shortcodes -->
 <!-- This is expanding the blue.html shortcode -->
-<div class="vstack">
+<div class="vstack text-white">
   <img class="w-100" src="assets/dividers/top-oval.svg">
   <div class="w-100 vstack align-items-center" style="background-color: #3A7DFF">
 
@@ -41,5 +41,38 @@ title = "University of Warwick Computing Society"
 </div>
   </div>
   <img class="w-100" src="assets/dividers/bottom-oval.svg">
+</div>
+
+
+<div class="w-100 vstack align-items-center my-5">
+<h1>Our Socials</h1>
+
+<div id="socials" class="col-lg-10 gap-3 d-flex flex-wrap justify-content-evenly">
+
+{% socialblock(social="discord", title="Discord") %}
+Where our members and alumni hang out
+{% end %}
+
+{% socialblock(social="instagram", title="Instagram") %}
+Announcements and our weekly schedule
+{% end %}
+
+{% socialblock(social="discord", title="Warwick SU") %}
+We are free to join!
+{% end %}
+
+{% socialblock(social="youtube", title="YouTube") %}
+Recorded talks from students & industry
+{% end %}
+
+{% socialblock(social="github", title="GitHub") %}
+Contribute to our open-source projects
+{% end %}
+
+{% socialblock(social="linkedin", title="LinkedIn") %}
+Networking and retrospectives
+{% end %}
+
+</div>
 </div>
 
