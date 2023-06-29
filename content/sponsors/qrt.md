@@ -3,6 +3,7 @@ title = "Qube Research & Technologies"
 
 [extra]
 logo = "sponsors/qrt.png"
+link = "https://www.qube-rt.com/"
 tier = "Gold"
 +++
 

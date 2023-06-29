@@ -3,6 +3,7 @@ title = "G-Research"
 
 [extra]
 logo = "sponsors/gresearch.png"
+link = "https://www.gresearch.co.uk/join-us/"
 tier = "Gold"
 +++
 

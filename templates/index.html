@@ -2,8 +2,10 @@
 {% block title %}{{ section.title }}{% endblock title %}
 {% block header %}{% endblock header %}
 {% block content %}
+{# Main Content #}
 {{ section.content | safe}}
 
+{# Sponsors #}
 <div class="w-100 vstack align-items-center my-5">
 <h1>Our Sponsors</h1>
 
@@ -14,15 +16,19 @@
 <div id="gold" class="col-lg-10 mx-auto gap-3 d-flex flex-wrap justify-content-evenly align-items-center">
 {% for sponsor in spon_sec.pages %}
 {% if sponsor.extra.tier == "Gold" %}
-<img class="white-hover" src="{{ sponsor.extra.logo }}" style="max-height: 150px; max-width: 100%">
+<a href="{{ sponsor.extra.link }}">
+<img class="white-hover" src="{{ sponsor.extra.logo }}" style="max-height: 125px; max-width: 100%">
+</a>
 {% endif %}
 {% endfor %}
 </div>
 
-<div id="silver" class="col-lg-10 mx-auto gap-3 d-flex flex-wrap justify-content-evenly align-items-center">
+<div id="silver" class="mt-4 col-lg-10 mx-auto gap-3 d-flex flex-wrap justify-content-evenly align-items-center">
 {% for sponsor in spon_sec.pages %}
 {% if sponsor.extra.tier == "Silver" %}
-<img class="white-hover" src="{{ sponsor.extra.logo }}" style="max-height: 75px; max-width: 100%">
+<a href="{{ sponsor.extra.link }}">
+<img class="white-hover" src="{{ sponsor.extra.logo }}" style="max-height: 100px; max-width: 100%">
+</a>
 {% endif %}
 {% endfor %}
 </div>
@@ -32,14 +38,14 @@
 function equalize_visual_size(elem_id, area) {
     const elem = document.getElementById(elem_id)
     for (let s of elem.children) {
-        const h = s.height * Math.sqrt(200 * 150 / (s.width * s.height)) 
+        const h = s.height * Math.sqrt(area / (s.width * s.height)) 
         s.style.height = `${Math.round(h)}px` 
     }
 }
 
 window.addEventListener('load', function () {
-    equalize_visual_size("gold", 150 * 100);
-    equalize_visual_size("silver", 100 * 75);
+    equalize_visual_size("gold", 150 * 125);
+    equalize_visual_size("silver", 125 * 100);
 })
 </script>
 
