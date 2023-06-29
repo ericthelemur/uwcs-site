@@ -18,3 +18,16 @@
 {% endfor %}
 </div>
 
+<script>
+window.addEventListener('load', function () {
+    const spons = document.getElementById("sponsors")
+    for (let s of spons.children) {
+        console.log(`${s.width}x${s.height}`)
+        const h = s.height * Math.sqrt(200 * 150 / (s.width * s.height)) 
+        s.style.height = `${Math.round(h)}px` 
+        console.log(h)
+    }
+})
+</script>
+
+{% endblock content%}
