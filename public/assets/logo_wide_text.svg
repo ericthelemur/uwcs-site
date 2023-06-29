@@ -1,8 +1,10 @@
 <svg width="770" height="153" viewBox="0 0 770 153" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M57.5024 41.506C53.3998 41.506 49.3895 40.2895 45.9784 38.0102C42.5672 35.731 39.9086 32.4915 38.3387 28.7012C36.7687 24.911 36.3579 20.7404 37.1583 16.7167C37.9586 12.693 39.9342 8.99705 42.8351 6.09614C45.736 3.19523 49.432 1.21968 53.4557 0.419324C57.4793 -0.381035 61.65 0.0297436 65.4402 1.5997C69.2304 3.16966 72.47 5.8283 74.7492 9.2394C77.0285 12.6505 78.245 16.6609 78.245 20.7634C78.2403 26.2632 76.0534 31.5364 72.1644 35.4254C68.2754 39.3144 63.0022 41.5013 57.5024 41.506V41.506Z" fill="#FFC700"/>
-<path d="M21.4663 77.7204C32.9221 77.7204 42.2089 68.4336 42.2089 56.9777C42.2089 45.5219 32.9221 36.2351 21.4663 36.2351C10.0104 36.2351 0.723633 45.5219 0.723633 56.9777C0.723633 68.4336 10.0104 77.7204 21.4663 77.7204Z" fill="#FFC700"/>
-<path d="M57.5023 115.651C68.9582 115.651 78.245 106.364 78.245 94.9082C78.245 83.4523 68.9582 74.1655 57.5023 74.1655C46.0465 74.1655 36.7597 83.4523 36.7597 94.9082C36.7597 106.364 46.0465 115.651 57.5023 115.651Z" fill="#3A7DFF"/>
-<path d="M93.9136 152.062C105.369 152.062 114.656 142.775 114.656 131.319C114.656 119.864 105.369 110.577 93.9136 110.577C82.4578 110.577 73.171 119.864 73.171 131.319C73.171 142.775 82.4578 152.062 93.9136 152.062Z" fill="#3A7DFF"/>
-<text fill="white" xml:space="preserve" style="white-space: pre" font-family="Montserrat" font-size="55.5465" font-weight="bold" letter-spacing="0em"><tspan x="142.923" y="130.266">Computing Society</tspan></text>
-<text fill="white" xml:space="preserve" style="white-space: pre" font-family="Montserrat" font-size="55.5465" font-weight="600" letter-spacing="0em"><tspan x="142.923" y="62.2662">University of Warwick&#10;</tspan></text>
+<circle fill="#FFC700" cx=57.5 cy=21 r=21 />
+<circle fill="#FFC700" cx=21.5 cy=57 r=21 />
+<circle fill="#3A7DFF" cx=57.5 cy=95 r=21 />
+<circle fill="#3A7DFF" cx=94 cy=131.5 r=21 />
+<text fill="white" xml:space="preserve" style="white-space: pre" font-family="Montserrat" font-size="55.5465" font-weight="bold" letter-spacing="0em">
+    <tspan x="142.923" y="130.266">Computing Society</tspan>
+    <tspan x="142.923" y="62.2662">University of Warwick&#10;</tspan>
+</text>
 </svg>
