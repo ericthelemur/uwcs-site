@@ -14,7 +14,7 @@
 <div id="gold" class="col-lg-10 mx-auto gap-3 d-flex flex-wrap justify-content-evenly align-items-center">
 {% for sponsor in spon_sec.pages %}
 {% if sponsor.extra.tier == "Gold" %}
-<img src="{{ sponsor.extra.logo }}" style="max-height: 150px; max-width: 100%">
+<img class="white-hover" src="{{ sponsor.extra.logo }}" style="max-height: 150px; max-width: 100%">
 {% endif %}
 {% endfor %}
 </div>
@@ -22,7 +22,7 @@
 <div id="silver" class="col-lg-10 mx-auto gap-3 d-flex flex-wrap justify-content-evenly align-items-center">
 {% for sponsor in spon_sec.pages %}
 {% if sponsor.extra.tier == "Silver" %}
-<img src="{{ sponsor.extra.logo }}" style="max-height: 75px; max-width: 100%">
+<img class="white-hover" src="{{ sponsor.extra.logo }}" style="max-height: 75px; max-width: 100%">
 {% endif %}
 {% endfor %}
 </div>
