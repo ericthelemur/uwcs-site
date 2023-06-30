@@ -16,11 +16,14 @@ $body-secondary-bg-dark: $uwcs-greyer
 
 @import "bootstrap/bootstrap.scss"
 
+// Background
 #content
     background-image: url("assets/bg-particles.png")
     background-repeat: repeat-y
     background-size: contain
     z-index: 1
+
+// Hover Effects
 
 .opacity-hover
     opacity: 75%
@@ -47,6 +50,13 @@ $body-secondary-bg-dark: $uwcs-greyer
     -webkit-filter: none
     opacity: 1
 
+.link-card
+    transition: color .25s
+
+.link-card:hover
+    @extend .text-body-emphasis
+
+// Line count limiter
 .four-line-clamp
     display: -webkit-box
     -webkit-line-clamp: 4
@@ -59,6 +69,7 @@ $body-secondary-bg-dark: $uwcs-greyer
     -webkit-box-orient: vertical
     overflow: hidden
 
+// Blue region dividers
 .blue
     position: relative
     margin-top: 60px
@@ -78,6 +89,7 @@ $body-secondary-bg-dark: $uwcs-greyer
     top: 100%
     transform: scaleY(-1) translateY(50%)
 
+// Fonts
 body
     font-family: "Mulish", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
     font-size: 1.25em
@@ -90,9 +102,10 @@ h5,
 h6
     font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 
-// #info strong 
-//     @extend 
+#info strong
+    @extend .fw-semibold
 
+// Spacing
 hr
     margin: 1.5rem 0
     border-top-width: 3px
