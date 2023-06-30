@@ -1,0 +1,28 @@
+{% macro tier(tier, sponsors) %}
+<div id="{{ tier | lower }}" class="col-lg-10 mx-auto gap-3 d-flex flex-wrap justify-content-evenly align-items-center">
+{% for sponsor in sponsors %}
+{% if sponsor.extra.tier == tier %}
+<a href="{{ sponsor.extra.link }}">
+<img class="white-hover" src="{{ sponsor.extra.logo }}" style="max-height: 125px; max-width: 100%">
+</a>
+{% endif %}
+{% endfor %}
+</div>
+{% endmacro tier %}
+
+{% macro resize() %}
+<script>
+    function equalize_visual_size(elem_id, area) {
+        const elem = document.getElementById(elem_id)
+        for (let s of elem.children) {
+            const h = s.height * Math.sqrt(area / (s.width * s.height)) 
+            s.style.height = `${Math.round(h)}px` 
+        }
+    }
+    
+    window.addEventListener('load', function () {
+        equalize_visual_size("gold", 150 * 125);
+        equalize_visual_size("silver", 125 * 100);
+    })
+</script>
+{% endmacro resize %}
