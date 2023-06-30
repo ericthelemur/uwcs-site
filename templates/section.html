@@ -17,7 +17,7 @@
 <div class="posts p-2">
     {% for page in pages %}
       <!-- Card for each page -->
-      {{ macros::news_card(page=page) }}
+      {{ macros::news_card(page=page, sum_len=250, title_weight="fw-semibold") }}
     {% endfor %}
 </div>
 {%endif%}
