@@ -1,4 +1,7 @@
 {% extends "base.html" %}
+
+{% import "macros.html" as macros %}
+
 {% block title %}{{ section.title }}{% endblock title %}
 {% block content %}
 {{ section.content | safe}}
@@ -14,21 +17,7 @@
 <div class="posts p-2">
     {% for page in pages %}
       <!-- Card for each page -->
-      <div class="card w-100 mb-3">
-        <div class="card-body">
-          <h5 class="card-title">{{ page.title }}</h5>
-          {% if page.date %}
-          <h6 class="card-subtitle mb-2 text-body-secondary">{{ page.date | date(format="%d %B %Y") }} </h6>
-          {% endif %}
-          <!-- Use summary if exists, otherwise truncate contents -->
-          {% if page.summary %}
-          <p class="card-text">{{ page.summary | striptags }}</p>
-          {% else %}
-          <p class="card-text">{{ page.content | striptags | truncate(length=250) }}</p>
-          {% endif %}
-          <a href="{{ page.permalink }}" class="card-link">Read more >></a>
-        </div>
-      </div>
+      {{ macros::news_card(page=page) }}
     {% endfor %}
 </div>
 {%endif%}
