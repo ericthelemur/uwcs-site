@@ -28,14 +28,23 @@ $body-secondary-bg-dark: $uwcs-greyer
     &:hover
         opacity: 100%
 
-.white-hover
-    transition: filter 0.5s
-    filter: brightness(0) invert(1) opacity(0.75)
-    -webkit-filter: brightness(0) invert(1) opacity(0.75)
+[data-bs-theme="light"] .silhouette
+    filter: brightness(0)
+    -webkit-filter: brightness(0)
 
-    &:hover
-        filter: none
-        -webkit-filter: none
+[data-bs-theme="dark"] .silhouette
+    filter: brightness(0) invert(1)
+    -webkit-filter: brightness(0) invert(1)
+
+.white-hover
+    @extend .silhouette
+    transition: filter 0.5s
+    opacity: 0.75
+
+.white-hover:hover
+    filter: none
+    -webkit-filter: none
+    opacity: 1
 
 .four-line-clamp
     display: -webkit-box
