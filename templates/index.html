@@ -4,7 +4,9 @@
 
 {% block title %}{{ section.title }}{% endblock title %}
 {% block header %}{% endblock header %}
-{% block content %}
+{% block outercontents %}
+<article id="content" class="w-100 mb-4">
+
 {# Main Content #}
 {{ section.content | safe}}
 
@@ -21,8 +23,6 @@
 </div>
 
 {{ spon_macros::resize() }}
-
-
 
 <div class="blue w-100 vstack align-items-center bg-primary text-white" data-bs-theme="dark">
 
@@ -44,4 +44,5 @@
 
 {%endif%}
 
+</article>
 {% endblock content%}

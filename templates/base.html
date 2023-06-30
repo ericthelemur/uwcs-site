@@ -11,14 +11,14 @@
 <body>
   {% include "parts/nav.html" %}
   <div class="container min-vh-100 d-flex flex-column align-items-center p-0">
-    <!-- <div class="w-100 px-1"> -->
       {% include "parts/breadcrumb.html" %}
 
-      <article id="content" class="w-100 mb-4">
+      {% block outercontents %}
+      <article id="content" class="w-100 my-4">
         {% block header %}<h1>{% if page %} {{ page.title | safe }} {% elif section %} {{ section.title | safe }} {% endif %} </h1>{% endblock %}
         {% block content %}{% endblock %}
       </article>
-    <!-- </div> -->
+      {% endblock %}
     {% include "parts/footer.html" %}
   </div>
 </body>
