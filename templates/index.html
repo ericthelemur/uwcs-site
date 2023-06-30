@@ -6,7 +6,7 @@
 {{ section.content | safe}}
 
 {# Sponsors #}
-<div class="w-100 vstack align-items-center my-5">
+<div class="w-100 vstack align-items-center my-5 pb-5">
 <h1>Our Sponsors</h1>
 
 <div id="sponsors">
@@ -33,6 +33,7 @@
 {% endfor %}
 </div>
 </div>
+</div>
 
 <script>
 function equalize_visual_size(elem_id, area) {
@@ -50,9 +51,7 @@ window.addEventListener('load', function () {
 </script>
 
 
-<div class="vstack text-white mt-5" data-bs-theme="dark">
-  <img class="w-100" src="assets/dividers/top-oval.svg">
-  <div class="w-100 vstack align-items-center" style="background-color: #3A7DFF">
+<div class="blue w-100 vstack align-items-center bg-primary text-white"  data-bs-theme="dark">
 
 {# News #}
 {% set news_sec = get_section(path="news/_index.md") %}
@@ -82,12 +81,10 @@ window.addEventListener('load', function () {
         </div>
       </div>
     {% endfor %}
-</div>
+    
+    {# Events #}
+  </div>
 
-{# Events #}
-
-<img class="w-100" src="assets/dividers/bottom-oval.svg">
-</div>
 {%endif%}
 
 {% endblock content%}
