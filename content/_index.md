@@ -6,9 +6,7 @@ title = "University of Warwick Computing Society"
 
 <!-- Unfortunately, Zola doesn't allow nested shortcodes -->
 <!-- This is expanding the blue.html shortcode -->
-<div class="vstack text-white"  data-bs-theme="dark">
-  <img class="w-100" src="assets/dividers/top-oval.svg">
-  <div class="w-100 vstack align-items-center bg-primary">
+<div class="blue w-100 vstack align-items-center bg-primary text-white"  data-bs-theme="dark">
 
 <h1>Hello, World! Here’s what we do:</h1>
 
@@ -39,12 +37,10 @@ title = "University of Warwick Computing Society"
 {% end %}
 
 </div>
-  </div>
-  <img class="w-100" src="assets/dividers/bottom-oval.svg">
 </div>
 
 
-<div class="w-100 vstack align-items-center my-5">
+<div class="w-100 vstack align-items-center my-5 pt-5">
 <h1>Our Socials</h1>
 
 <div id="socials" class="mb-5 col-lg-10 gap-3 d-flex flex-wrap justify-content-evenly">
