@@ -6,13 +6,13 @@ title = "University of Warwick Computing Society"
 
 <!-- Unfortunately, Zola doesn't allow nested shortcodes -->
 <!-- This is expanding the blue.html shortcode -->
-<div class="vstack text-white">
+<div class="vstack text-white"  data-bs-theme="dark">
   <img class="w-100" src="assets/dividers/top-oval.svg">
-  <div class="w-100 vstack align-items-center" style="background-color: #3A7DFF">
+  <div class="w-100 vstack align-items-center bg-primary">
 
 <h1>Hello, World! Here’s what we do:</h1>
 
-<div class="w-100 d-flex flex-wrap justify-content-center">
+<div id="info" class="w-100 d-flex flex-wrap justify-content-center">
 
 {% iconblock(role="academic", title="Academic Events") %}
 **No matter your experience, we’re here to help you pick up some skills.** Workshops, Industry Talks, Competitions, Student Talks, Courses, Revision Sessions, and more!
