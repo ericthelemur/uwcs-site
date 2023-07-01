@@ -4,8 +4,9 @@
 
 {% block title %}{{ section.title }}{% endblock title %}
 {% block header %}{% endblock header %}
+{% block main_extra %}{% endblock %}
 {% block outercontents %}
-<article id="content" class="w-100 mb-4">
+<article id="content" class="w-100 mb-4 bg-transparent">
 
 {# Main Content #}
 {{ section.content | safe}}
