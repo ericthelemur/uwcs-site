@@ -118,3 +118,18 @@ blockquote
 
 p:last-child
     margin-bottom: 0px
+
+// Circles fade in
+@keyframes fadeIn
+    from
+        opacity: 0
+
+    to
+        opacity: 1
+
+#hero > svg > image
+    opacity: 0
+    animation-name: fadeIn
+    animation-duration: 1s
+    animation-iteration-count: 1
+    animation-fill-mode: forwards
