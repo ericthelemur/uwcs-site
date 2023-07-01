@@ -40,6 +40,10 @@ p:last-child {
     margin-bottom: 0px;
 }
 
+.navbar {
+    @extend .sticky-top, .navbar-expand-lg, .bg-body, .border-bottom, .border-primary, .border-4;
+}
+
 // Background
 body {
     background-image: url("assets/bg-particles.png");
