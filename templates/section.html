@@ -14,7 +14,7 @@
 {% endif %}
 
 {% if pages %}
-<div class="posts p-2">
+<div class="posts p-2 gap-3 vstack">
     {% for page in pages %}
       <!-- Card for each page -->
       {{ macros::news_card(page=page, sum_len=250, title_weight="fw-semibold") }}
