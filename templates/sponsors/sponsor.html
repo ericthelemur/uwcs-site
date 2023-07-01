@@ -2,7 +2,7 @@
 {% block title %}{{ page.title }}{% endblock title %}
 {% block content %}
 {% if page.extra.logo %}
-<img src="{{ page.extra.logo }}">
+<img src="{{ config.base_url | safe }}/{{ page.extra.logo }}">
 {% endif %}
 {% if page.extra.tier %}
 {{ page.extra.tier }}
