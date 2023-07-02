@@ -3,7 +3,7 @@
 {% for sponsor in sponsors %}
 {% if sponsor.extra.tier == tier %}
 <a href="{{ sponsor.extra.link }}">
-<img class="white-hover" src="{{ sponsor.extra.logo }}" style="max-height: 125px; max-width: 100%">
+<img class="white-hover" src="{{ sponsor.extra.logo }}" style="height: 100px; max-width: 100%">
 </a>
 {% endif %}
 {% endfor %}
@@ -15,14 +15,15 @@
     function equalize_visual_size(elem_id, area) {
         const elem = document.getElementById(elem_id)
         for (let s of elem.children) {
+            s = s.children[0];
             const h = s.height * Math.sqrt(area / (s.width * s.height)) 
             s.style.height = `${Math.round(h)}px` 
         }
     }
     
     window.addEventListener('load', function () {
-        equalize_visual_size("gold", 150 * 125);
-        equalize_visual_size("silver", 125 * 100);
+        equalize_visual_size("gold", 150 * 150);
+        equalize_visual_size("silver", 125 * 125);
     })
 </script>
 {% endmacro resize %}
