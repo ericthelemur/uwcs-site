@@ -52,6 +52,7 @@ body {
 
 // Blue region dividers
 .blue {
+    @extend .bg-primary, .text-white;
     position: relative;
     margin-top: 60px;
     margin-bottom: 60px;
@@ -110,6 +111,16 @@ body {
     filter: brightness(0) invert(1);
     -webkit-filter: brightness(0) invert(1);
 }
+
+// #gold a::after {
+//     content: "";
+//     background: rgba(0, 200, 0, 0.5);
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+// }
 
 .white-hover {
     @extend .silhouette;

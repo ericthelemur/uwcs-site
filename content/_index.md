@@ -6,7 +6,7 @@ title = "University of Warwick Computing Society"
 
 <!-- Unfortunately, Zola doesn't allow nested shortcodes -->
 <!-- This is expanding the blue.html shortcode -->
-<div class="blue w-100 vstack align-items-center bg-primary text-white"  data-bs-theme="dark">
+<div class="blue w-100 vstack align-items-center"  data-bs-theme="dark">
 
 <h1>Hello, World! Here’s what we do:</h1>
 
