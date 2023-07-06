@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% import "macros/sponsors.html" as spon_macros %}
-{% import "macros.html" as macros %}
+{% import "macros/cards.html" as cards %}
 
 {% block title %}{{ section.title }}{% endblock title %}
 {% block header %}{% endblock header %}
@@ -37,7 +37,7 @@
     {% for page in pages %}
       {% if loop.index > 3 %} {% break %} {% endif %}
       <!-- Card for each page -->
-      {{ macros::news_card(page=page) }}
+      {{ cards::news_card(page=page) }}
     {% endfor %}
     
     {# Events #}
