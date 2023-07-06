@@ -1,26 +1,32 @@
-{% macro input(label, type="text") %}
-    <label>
-        {{ label }}
-        <input type="{{type}}" />
-    </label>
-{% endmacro input %}
-
-{% macro news_card(page, sum_len=125, title_weight="fw-normal") %}
+{% macro custom_card(title, subtitle="", date="", summary="", link="", sum_len=125, title_weight="fw-normal") %}
 <div class="card w-100 col-lg link-card">
   <div class="card-body">
-    <h5 class="card-title two-line-clamp {{ title_weight }}">{{ page.title }}</h5>
-    {% if page.date %}
-    <h6 class="card-subtitle mb-2 text-body-secondary">{{ page.date | date(format="%d %B %Y") }} </h6>
+    <h5 class="card-title two-line-clamp {{ title_weight }}">{{ title }}</h5>
+    {% if subtitle %}
+    <h6 class="card-subtitle mb-2 text-body-secondary">{{ subtitle }} </h6>
     {% endif %}
+    {% if date %}
+    <h6 class="card-subtitle mb-2 text-body-secondary">{{ date | date(format="%d %B %Y") }} </h6>
+    {% endif %}
+    {% if summary %}
     <p class="card-text four-line-clamp m-0">
-    <!-- Use summary if exists, otherwise truncate contents -->
-    {% if page.summary %}
-    {{ page.summary | striptags | truncate(length=sum_len) }}
-    {% else %}
-    {{ page.content | striptags | truncate(length=sum_len) }}
-    {% endif %}
+      {{ summary | striptags | truncate(length=sum_len) }}
     </p>
-    <a class="stretched-link" href="{{ page.permalink }}" class="card-link">Read more >></a>
+    {% endif %}
+    
+    {% if link %}
+    <a class="stretched-link" href="{{ link }}" class="card-link">Read more >></a>
+    {% endif %}
   </div>
 </div>
+{% endmacro custom_card %}
+
+{% macro news_card(page, sum_len=125, title_weight="fw-semibold") %}
+{% if page.summary %}
+{% set summ = page.summary %}
+{% else %}
+{% set summ = page.content %}
+{% endif %}
+
+{{ macros::custom_card(title=page.title, date=page.date, summary=summ, link=page.permalink, sum_len=sum_len, title_weight=title_weight) }}
 {% endmacro news_card %}
