@@ -5,7 +5,7 @@
 
 <!-- Don't trigger on top level -->
 {% if page.ancestors | length > 1 %}
-<nav aria-label="breadcrumb" class="w-100 pt-2">
+<nav aria-label="breadcrumb" class="container-lg pt-2 bg-body px-4">
   <ol class="breadcrumb">
     <!-- Generate for each ancestor -->
     {% for parent in page.ancestors %}

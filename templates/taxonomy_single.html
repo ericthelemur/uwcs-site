@@ -2,7 +2,7 @@
 
 {% block title %}{{ taxonomy.name | capitalize }}: {{ term.name | capitalize }}{% endblock title %}
 {% block breadcrumb %}
-<nav aria-label="breadcrumb" class="w-100 pt-2">
+<nav aria-label="breadcrumb" class="container-lg pt-2 bg-body px-4">
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="{{ config.base_url | safe }}/{{ taxonomy.name | safe }}">{{ taxonomy.name | capitalize | truncate(length=25) }}</a></li>
       <li class="breadcrumb-item active" aria-current="page">{{ term.name | capitalize | truncate(length=25)}}</li>

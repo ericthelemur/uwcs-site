@@ -12,9 +12,8 @@
 </script>
 <body class="min-vh-100 vstack">
   {% include "parts/nav.html" %}
-  <div id="main" class="container-lg d-flex flex-column align-items-center p-0 flex-grow-1 {% block main_extra %}bg-body px-4{% endblock %}">
     {% block breadcrumb %}{% include "parts/breadcrumb.html" %}{% endblock %}
-
+  <div id="main" class="container-lg d-flex p-0 flex-grow-1 {% block main_extra %}bg-body px-4{% endblock %}">
       {% block outercontents %}
       <article id="content" class="w-100 py-4 flex-grow-1">
         {% block header %}<h1>{% if page %} {{ page.title | safe }} {% elif section %} {{ section.title | safe }} {% endif %} </h1>{% endblock %}
