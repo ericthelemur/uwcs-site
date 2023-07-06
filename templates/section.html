@@ -4,7 +4,8 @@
 
 {% block title %}{{ section.title }}{% endblock title %}
 {% block content %}
-{{ section.content | safe}}
+
+{% block secbody %}{{ section.content | safe}}{% endblock %}
 
 <hr>
 <!-- Use paginator pages if exists -->
@@ -12,6 +13,8 @@
 {% set pages = paginator.pages %}
 {% elif section.pages %}
 {% set pages = section.pages %}
+{% elif term.pages %}
+{% set pages = term.pages %}
 {% endif %}
 
 {% if pages %}

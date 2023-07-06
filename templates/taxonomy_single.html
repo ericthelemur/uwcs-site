@@ -1,0 +1,5 @@
+{% extends "section.html" %}
+
+{% block title %}{{ taxonomy.name }}: {{ term.name }}{% endblock title %}
+{% block breadcrumb %}{% endblock breadcrumb %}
+{% block secbody %}All items associated with the {{ taxonomy.name }} <strong>{{ term.name }}</strong>:{% endblock %}

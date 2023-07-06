@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% import "macros.html" as macros %}
+
+{% block title %}{{ taxonomy.name }}{% endblock title %}
+{% block breadcrumb %}{% endblock breadcrumb %}
+{% block content %}
+
+<hr>
+{{ taxonomy.slug }}
+
+{% endblock content%}
