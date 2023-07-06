@@ -1,7 +1,7 @@
 +++
 title = "Resources"
 weight = 3
-sort_by = "weight"
+sort_by = "date"
 template = "specific/resources.html"
 +++
 

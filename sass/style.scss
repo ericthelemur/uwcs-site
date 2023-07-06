@@ -30,7 +30,7 @@ h2,
     @extend .fw-semibold;
 }
 
-blockquote {
+blockquote, pre {
     @extend .bg-body-tertiary, .border-start, .ms-3, .p-2, .ps-3, .mb-2;
 }
 
