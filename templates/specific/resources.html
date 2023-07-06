@@ -8,7 +8,7 @@
 <div class="posts p-2 gap-3 vstack">
     {% for page in section.pages %}
       <!-- Card for each page -->
-      {{ cards::news_card(page=page, sum_len=0) }}
+      {{ cards::news_card(page=page, sum_len=1000) }}
     {% endfor %}
 </div>
 

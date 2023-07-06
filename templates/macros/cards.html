@@ -1,11 +1,7 @@
 {% macro custom_card(title, subtitle="", date="", summary="", link="", link_text="Read more >>", sum_len=125, add_card_classes="", add_card_style="") %}
-{% if sum_len == 0 %}
-{% set sum_len = 10000000 %}
-{% endif %}
-
 <div class="card w-100 col-lg link-card {{ add_card_classes | safe }}" {{ add_card_style | safe }}>
   <div class="card-body">
-    <h5 class="card-title {% if sum_len != 10000000 %}two-line-clamp{% endif %}">{{ title | safe }}</h5>
+    <h5 class="card-title two-line-clamp">{{ title | safe }}</h5>
     {% if subtitle %}
     <h6 class="card-subtitle mb-2 text-body-secondary">{{ subtitle | safe }} </h6>
     {% endif %}
@@ -13,8 +9,8 @@
     <h6 class="card-subtitle mb-2 text-body-secondary">{{ date | date(format="%d %B %Y") }} </h6>
     {% endif %}
     {% if summary %}
-    <p class="card-text {% if sum_len != 10000000 %}four-line-clamp{% endif %} m-0">
-      {{ summary | truncate(length=sum_len) | safe }}
+    <p class="card-text four-line-clamp m-0">
+      {{ summary | striptags | truncate(length=sum_len) | safe }}
     </p>
     {% endif %}
     
@@ -32,13 +28,5 @@
 {% set summ = page.content %}
 {% endif %}
 
-{% if page.extra.link %}
-{% set link = page.extra.link %}
-{% set text = "Visit " ~ page.extra.link %}
-{% else %}
-{% set link = page.permalink %}
-{% set text = "Read more >> " %}
-{% endif %}
-
-{{ cards::custom_card(title=page.title, date=page.date, summary=summ, link=link, link_text=text, sum_len=sum_len, title_weight=title_weight) }}
+{{ cards::custom_card(title=page.title, date=page.date, summary=summ, link=page.permalink, sum_len=sum_len, title_weight=title_weight) }}
 {% endmacro news_card %}
