@@ -9,6 +9,7 @@ build_search_index = false
 
 taxonomies = [
     { name = "terms", feed = true},
+    { name = "categories", feed = true},
     { name = "tags", feed = true},
 ]
 
