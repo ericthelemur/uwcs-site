@@ -8,3 +8,8 @@
 <link rel="stylesheet" href="{{ config.base_url | safe }}/icon-packs/bootstrap-icons.min.css">
 <script src="{{ config.base_url | safe }}/scripts/darkmode.js"></script>
 <link rel="stylesheet" href="{{ config.base_url | safe }}/style.css">
+
+{% if config.markdown.highlight_code and config.markdown.highlight_theme == "css" %}
+<link rel="stylesheet" type="text/css" href="/syntax-theme-dark.css"/>
+<link rel="stylesheet" type="text/css" href="/syntax-theme-light.css"/>
+{% endif %}
