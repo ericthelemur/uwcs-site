@@ -8,7 +8,7 @@
 {% for term in terms %}
 <a class="badge bg-secondary text-decoration-none ms-1" 
     href="{{ config.base_url | safe }}/{{ tax | slugify }}/{{ term | slugify }}">
-{{ term | capitalize }} 
+{{ term  }} 
 </a>
 {% endfor %}
 {% endfor %}

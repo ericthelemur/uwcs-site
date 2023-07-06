@@ -15,7 +15,7 @@ All {{taxonomy.name}} on this site:
 
 <div class="posts p-2 gap-3 d-flex flex-wrap">
     {% for term in terms %}
-      {{ cards::custom_card(title=term.name | capitalize, link=term.permalink, link_text="See all >>", add_card_classes="col-md", add_card_style="style='min-width: fit-content'") }}
+      {{ cards::custom_card(title=term.name, link=term.permalink, link_text="See all >>", add_card_classes="col-md", add_card_style="style='min-width: fit-content'") }}
     {% endfor %}
 </div>
 
