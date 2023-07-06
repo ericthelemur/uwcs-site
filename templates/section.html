@@ -26,4 +26,8 @@
 </div>
 {%endif%}
 
+{% if paginator %}
+{% include "parts/pagination.html" %}
+{% endif %}
+
 {% endblock content%}
