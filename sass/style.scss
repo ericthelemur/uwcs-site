@@ -31,7 +31,7 @@ h2,
 }
 
 blockquote {
-    @extend .bg-body-tertiary, .border-start, .ms-3, .p-3, .mb-0;
+    @extend .bg-body-tertiary, .border-start, .ms-3, .p-2, .ps-3, .mb-2;
 }
 
 p:last-child {
