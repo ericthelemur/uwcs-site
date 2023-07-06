@@ -1,6 +1,6 @@
 +++
 title = "Sponsors"
-weight = 3
+weight = 10
 page_template = "specific/sponsor.html"
 +++
 
