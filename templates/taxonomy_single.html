@@ -1,7 +1,14 @@
 {% extends "section.html" %}
 
 {% block title %}{{ taxonomy.name | capitalize }}: {{ term.name | capitalize }}{% endblock title %}
-{% block breadcrumb %}{% endblock breadcrumb %}
+{% block breadcrumb %}
+<nav aria-label="breadcrumb" class="w-100 pt-2">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{{ config.base_url | safe }}/{{ taxonomy.name | safe }}">{{ taxonomy.name | capitalize | truncate(length=25) }}</a></li>
+      <li class="breadcrumb-item active" aria-current="page">{{ term.name | capitalize | truncate(length=25)}}</li>
+    </ol>
+  </nav>
+{% endblock breadcrumb %}
 
 {% block header %}<h1>{{ taxonomy.name | capitalize }}: {{ term.name | capitalize }}</h1>{% endblock %}
 
