@@ -1,5 +1,10 @@
 {% extends "section.html" %}
 
-{% block title %}{{ taxonomy.name }}: {{ term.name }}{% endblock title %}
+{% block title %}{{ taxonomy.name | capitalize }}: {{ term.name | capitalize }}{% endblock title %}
 {% block breadcrumb %}{% endblock breadcrumb %}
-{% block secbody %}All items associated with the {{ taxonomy.name }} <strong>{{ term.name }}</strong>:{% endblock %}
+
+{% block header %}<h1>{{ taxonomy.name | capitalize }}: {{ term.name | capitalize }}</h1>{% endblock %}
+
+{% block secbody %}
+All items associated with the {{ taxonomy.name }} <strong>{{ term.name }}</strong>:
+{% endblock %}
