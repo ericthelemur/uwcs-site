@@ -1,9 +1,6 @@
 {% extends "base.html" %}
 {% block title %}{{ page.title }}{% endblock title %}
 {% block content %}
-<script>
-    console.log(`{{ __tera_context }}`)
-</script>
 
 {% if page.date %}
 <b>{{ page.date | date(format="%d %B %Y") }}</b> 
