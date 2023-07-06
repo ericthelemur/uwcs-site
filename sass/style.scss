@@ -18,7 +18,6 @@ $headings-font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFon
 $hr-margin-y: 1.5rem;
 $border-width: 3px;
 
-$card-bg: $uwcs-greyer;
 $card-border-width: 0;
 $card-border-radius: 1rem;
 
@@ -44,6 +43,10 @@ p:last-child {
 
 .navbar {
     @extend .sticky-top, .navbar-expand-lg, .bg-body, .border-bottom, .border-primary, .border-4;
+}
+
+.card {
+    @extend .bg-body-secondary;
 }
 
 // Background
