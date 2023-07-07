@@ -119,16 +119,6 @@ body {
     -webkit-filter: brightness(0) invert(1);
 }
 
-// #gold a::after {
-//     content: "";
-//     background: rgba(0, 200, 0, 0.5);
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-// }
-
 .white-hover {
     @extend .silhouette;
     transition: filter 0.5s;
@@ -165,6 +155,17 @@ body {
     animation-duration: 1s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+}
+
+@media (orientation: landscape) {
+    #hero-portrait {
+        display: none;
+    }
+}
+@media (orientation: portrait) {
+    #hero-landscape {
+        display: none;
+    }
 }
 
 // Zola suggested code formatting

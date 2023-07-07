@@ -8,7 +8,7 @@ title = "University of Warwick Computing Society"
 <!-- This is expanding the blue.html shortcode -->
 <div class="blue w-100 vstack align-items-center"  data-bs-theme="dark">
 
-<h1>Hello, World! Here’s what we do:</h1>
+<h1 class="text-center">Hello, World! Here’s what we do:</h1>
 
 <div id="info" class="w-100 d-flex flex-wrap justify-content-center">
 
