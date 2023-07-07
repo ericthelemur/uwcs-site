@@ -28,14 +28,27 @@ We'd also recommend checking out [this tutorial](https://howtoprogram.dcs.warwic
 
 # Workshops / Labs
 
-### [Linux 101](https://uwcs.co.uk/resources/linux-101/)
+### [Linux 101](linux-101)
 *(DCS Only)* In partnership with the Department of Computer Science, this talk and accompanying lab serves as a short introduction to the Linux command line and departmental machines. We cover navigation, file/folder creation/deletion, permissions, and storage/printing quotas. By the end of this lab, you should be able to host your own public page on the DCS website!
 
-### [Git Good](https://uwcs.co.uk/resources/git-good/)
+### [Git Good](git-good)
 Git is an essential version control tool, used across the software engineering industry - from small solo projects to the world's largest tech companies. You might have used it before, but here we'll really dive in to how it works, why it's so useful, and how you can use it in your own projects going forward. Talk by Sam Coy, with an accompanying lab.
 
-### [Docker, Contained](https://uwcs.co.uk/resources/docker/)
+### [Docker, Contained](docker)
 
+---
+
+# Contests
+
+### [UWCS Challenge](https://challenge.uwcs.co.uk)
+In both teaching terms, we run our own team programming challenge. 5 custom problems, in teams of up to 3, with prizes for the top 3 teams! Past problems can be found [here](https://github.com/UWCS/progcomps/releases). We've also designed our own online judge for automatic marking - [try it out](https://challenge.uwcs.co.uk)!
+
+### Other Coding Competitions
+We promote and encourage participation in events like Advent of Code, the International Collegiate Programming Contest (ICPC), and ~~Google Hash Code~~ (rip). We also invite companies in to give their own programming challenges, such as G-Research.
+
+### Capture The Flag (CTF) Events
+
+We've hosted CTFs from both Nettitude and BAE Systems. The Cyber Security society also host a few of their own!
 
 ---
 
@@ -59,20 +72,6 @@ We gathered a bunch of third year students with projects covering a range of dif
 We also offer longer talks from industry professionals, across a wide range of companies. Check out Leo's 'Day in the life of a Software Engineer' talk below!
 
 {{ youtube(playlist="PLM7py5yAB4FyUtnZ26D9uikX0DhhwyoTg") }}
-
----
-
-# Contests
-
-### [UWCS Challenge](https://challenge.uwcs.co.uk)
-In both teaching terms, we run our own team programming challenge. 5 custom problems, in teams of up to 3, with prizes for the top 3 teams! Past problems can be found [here](https://github.com/UWCS/progcomps/releases). We've also designed our own online judge for automatic marking - [try it out](https://challenge.uwcs.co.uk)!
-
-### Other Coding Competitions
-We promote and encourage participation in events like Advent of Code, the International Collegiate Programming Contest (ICPC), and ~~Google Hash Code~~ (rip). We also invite companies in to give their own programming challenges, such as G-Research.
-
-### Capture The Flag (CTF) Events
-
-We've hosted CTFs from both Nettitude and BAE Systems. The Cyber Security society also host a few of their own!
 
 ---
 
