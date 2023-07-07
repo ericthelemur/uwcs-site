@@ -1,7 +1,7 @@
-<div class="hstack gap-3 col-xl-6 p-3" style="max-width: 700px">
-  <img {% if nth is odd %} class="order-xl-first order-last" {%endif%} height=150 src="{{ config.base_url | safe }}/assets/exec-icons/{{ role }}.svg">
+<div class="hstack gap-3 col-xl-6 py-3" style="max-width: 700px">
+  <img class="d-none d-sm-block {% if nth is odd %} order-xl-first order-last {%endif%}" width=150 src="{{ config.base_url | safe }}/assets/exec-icons/{{ role }}.svg">
   <div>
-    <h2>{{ title | markdown | safe }}</h2>
+    <h2><div class="icon baseline d-sm-none"><img src="{{ config.base_url | safe }}/assets/exec-icons/{{ role }}.svg"></div> {{ title | safe }}</h2>
     <h5>{{ body | markdown | safe  }}</h5>
   </div>
 </div>
