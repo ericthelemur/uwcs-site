@@ -100,6 +100,12 @@ body {
     transform: scaleY(-1) translateY(50%);
 }
 
+@include media-breakpoint-down(sm) {
+    .blue h5 {
+        font-size: 1em;
+    }
+}
+
 // Line count limiter
 .four-line-clamp {
     display: -webkit-box;
