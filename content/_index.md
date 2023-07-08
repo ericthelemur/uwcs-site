@@ -43,7 +43,7 @@ title = "University of Warwick Computing Society"
 <div class="w-100 vstack align-items-center my-5 pt-5">
 <h1>Our Socials</h1>
 
-<div id="socials" class="mb-5 col-md-10 gap-3 row row-cols-3  justify-content-evenly mx-4">
+<div id="socials" class="mb-5 col-md-11 gap-3 row justify-content-evenly mx-4">
 {% socialblock(social="discord", title="Discord", link="https://discord.uwcs.co.uk") %}
 Where our members and alumni hang out
 {% end %}
