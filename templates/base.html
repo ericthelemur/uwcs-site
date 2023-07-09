@@ -6,8 +6,9 @@
 <head>
   <meta charset="utf-8"/>
   <title>{% block title %}{% endblock %} - UWCS</title>
+  {% block head %}
   {% include "parts/head.html" %}
-  {% block head %}{% endblock %}
+  {% endblock %}
 </head>
 <script>
   console.log(`{{ __tera_context }}`)
