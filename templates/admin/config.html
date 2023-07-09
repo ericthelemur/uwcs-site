@@ -1,3 +1,4 @@
+# Yes, this should be config.yml, yes, it is a html template, no, i'm not sorry
 backend:
   name: github
   repo: ericthelemur/uwcs-site
@@ -5,17 +6,17 @@ backend:
   cms_label_prefix: "[CMS] "
 media_folder: "static/images"
 public_folder: "/images"
-site_url: http://86.130.201.19:9965/
-logo_url: http://86.130.201.19:9965/assets/logo_compact.svg
+site_url: {{ config.base_url | safe }}
+logo_url: {{ config.base_url | safe }}/assets/logo_compact.svg
 
 collections:
   - name: "news" # Used in routes, e.g., /admin/collections/blog
     label: "News" # Used in the UI
     folder: "content/news" # The path to the folder where the documents are stored
-    preview_path: news/{{slug}}
+    {% raw %}preview_path: news/{{slug}} {% endraw %}
     create: true # Allow users to create new documents in this collection
     format: toml-frontmatter
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    {% raw %}slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md {% endraw %}
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
       - {label: "News Date", name: "date", widget: "datetime"}
