@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% import "macros/front.html" as front %}
 {% import "macros/sponsors.html" as spon_macros %}
 {% import "macros/cards.html" as cards %}
 
@@ -14,6 +15,8 @@
 <article id="content" class="w-100 mb-4 bg-transparent">
 
 {# Main Content #}
+{{ front::hero() }}
+
 {{ section.content | safe}}
 
 {# Sponsors #}
