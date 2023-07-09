@@ -17,7 +17,6 @@ collections:
     format: toml-frontmatter
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Template", name: "template", widget: "hidden", default: "specific/news.html"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "News Date", name: "date", widget: "datetime"}
       - {label: "Categories", name: "taxonomies.categories", widget: "select", options: ["Newsletter", "Test"]}
