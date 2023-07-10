@@ -1,3 +1,5 @@
+{% import "macros/logos.html" as logos %}
+
 {% macro head() %}
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="icon" type="image/x-icon" href="{{ config.base_url | safe }}/assets/favicon.png">
@@ -24,7 +26,7 @@
       
       <!-- UWCS Logo -->
       <a class="navbar-brand" href="{{ config.base_url | safe }}">
-        {% include "parts/uwcs_logo.html" %}
+        {{ logos::dots_uwcs() }}
       </a>
 
       <!-- Navbar parts for mobile version -->
@@ -87,7 +89,7 @@
 <footer class="w-100 container-lg d-flex flex-wrap justify-content-around gap-2 py-3 border-top bg-body">
     <!-- Centred aligned uwcs logo -->
     <a class="d-flex text-decoration-none" href="https://uwcs.co.uk">
-        {% include "parts/uwcs_logo.html" %}
+      {{ logos::dots_uwcs() }}
     </a>
     <!-- Right aligned links -->
     <ul class="nav justify-content-end list-unstyled d-flex">
