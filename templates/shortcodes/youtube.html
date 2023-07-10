@@ -1,3 +1,17 @@
+{#
+YouTube embed in page, adapted from Zola's Shortcode example
+    
+Arguments:
+    id: ID of video (end of link to it)
+    playlist: ID of playlist (end of link to it)
+    autoplay: 1 if enabling autoplay
+    class: class for container for formatting
+
+Specify at least one of id and playlist (can be both)
+
+Examples: content/resources/linux-101.md
+#}
+
 <div class="ratio ratio-16x9 m-3 w-75 mx-auto {% if class %}{{class}}{% endif %}">
     <iframe src="https://www.youtube-nocookie.com/embed/{% if id %}{{id}}{% else %}videoseries{% endif %}{% if playlist %}?list={{playlist}}{% endif %}{% if autoplay %}?autoplay=1{% endif %}" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </div>

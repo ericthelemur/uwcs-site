@@ -1,0 +1,33 @@
+{# 
+A coloured callout block with text and an optional icon
+Arguments:
+    type: primary (blue), secondary (grey), success (green), warning (yellow), danger (red), info (light blue), light, dark
+    icon: A bootstrap icon (https://icons.getbootstrap.com) for the note, defaults to match type otherwise none
+    body: Text of the note
+
+Examples:
+
+{{ note(type="danger", body="oh no! you've done something") }}
+=> red callout with default danger icon and body
+
+{% note(type="primary", icon="heart-fill") %}
+Can fit a longer body here!
+{% end %}
+=> blue callout with no icon and longer body
+
+#}
+
+{% if not type %}{% set type="primary" %}{% endif %}
+{% if not icon %}
+    {% if type == "success" %}{% set icon="check-circle-fill" %}
+    {% elif type == "warning" %}{% set icon="exclamation-triangle-fill" %}
+    {% elif type == "danger" %}{% set icon="x-octagon-fill" %}
+    {% elif type == "info" %}{% set icon="info-circle-fill" %}
+    {% else %}{% set icon="none" %}
+    {% endif %}
+{% endif %}
+
+<div class="alert alert-{{ type }}" role="alert">
+  {% if icon != "none" %}<i class="bi bi-{{ icon }} me-2"></i>{% endif %}{{ body | markdown(inline=true) | safe }}
+</div>
+  
