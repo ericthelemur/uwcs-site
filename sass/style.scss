@@ -49,6 +49,10 @@ p:last-child {
     @extend .bg-body-secondary;
 }
 
+.frame-content {
+    @extend .bg-body, .p-4
+}
+
 // Icons
 .icon {
     display: inline-flex;
