@@ -1,4 +1,3 @@
-{% import "macros/shortcodes.html" as mac_sc %}
 <!doctype html>
 <html>
 <head>
@@ -16,46 +15,6 @@
     CMS.registerPreviewStyle("{{ config.base_url | safe }}/style.css");
   </script>
 
-<script>
-  CMS.registerEditorComponent({
-    id: "note",
-    label: "Note",
-    fields: [
-      {
-        name: 'type',
-        label: 'Type',
-        widget: 'string'
-
-      },
-      {
-        name: 'icon',
-        label: 'Icon',
-        widget: 'string'
-      },
-      {
-        name: 'body',
-        label: 'Body',
-        widget: 'string'
-      }
-    ],
-    // Parse md to component
-    {% raw %}pattern: /^{{ note\(type="([a-z]+)", icon="([a-z\-]+)", body="([^"]+)"\) }}$/ms,{% endraw %}
-    fromBlock: function(match) {
-      return {
-        type: match[1],
-        icon: match[2],
-        body: match[3]
-      };
-    },
-    // Convert component to md
-    toBlock: function(data) {
-      {% raw %}return `{{ note(type="${data.type}", icon="${data.icon}", body="${data.body}") }}`;{% endraw %}
-    },
-    // Generate preview of component
-    toPreview: function(data) {
-      return `{{ mac_sc::note(type="${data.type}", icon="${data.icon}", body="${data.body}") }}`;
-    }
-  });
-  </script>
+{{ section.content | safe}}
 </body>
 </html>
