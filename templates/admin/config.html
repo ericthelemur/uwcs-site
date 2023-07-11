@@ -28,7 +28,9 @@ collections:
         - label: "category"
           name: Category
           widget: select
-          options: ["Newsletter", "Test"]
+          {% set categories = get_taxonomy(kind="categories") %}
+          options: [{% for term in categories.items %}"{{ term.name }}", {% endfor %}]
+        default: ["Newsletter"]
 
       - label: "Term"
         name: "taxonomies.terms"
@@ -38,5 +40,6 @@ collections:
           name: Term
           widget: string
           pattern: ["[0-9]{2}/[0-9]{2}( T[0-4])?", "Format as '22/23 T2', term is optional"]
+          default: "22/23 T3"
           
       - {label: "Body", name: "body", widget: "markdown"}
