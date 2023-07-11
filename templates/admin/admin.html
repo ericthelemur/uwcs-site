@@ -7,13 +7,11 @@
   <title>Content Manager</title>
   <link href="{{ config.base_url | safe }}/admin/config/index.html" type="text/yaml" rel="cms-config-url">
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/@staticcms/app@^2.0.0/dist/main.css" />
 </head>
 <body>
   <!-- Include the script that builds the page and powers Decap CMS -->
-  <script src="https://unpkg.com/@staticcms/app@^2.0.0/dist/static-cms-app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
   <script>
-    CMS.init();
     CMS.registerPreviewStyle("{{ config.base_url | safe }}/style.css");
   </script>
 
