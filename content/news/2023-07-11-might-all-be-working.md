@@ -1,6 +1,6 @@
 +++
 title = "Might all be working?"
-date = "14 July 2023"
+date = "2023-07-13"
 
 [taxonomies]
 categories = ["Newsletter", "Test"]
