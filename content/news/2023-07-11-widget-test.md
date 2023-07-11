@@ -1,13 +1,9 @@
 +++
 title = "Widget Test"
-date = "14 July 2023"
-"taxonomies.categories" = ["Test", "New"]
+date = "2023-07-14"
+taxonomies.categories = ["Test", "New"]
+taxonomies.terms = ["22/23 T3", "22/23 awiodaw"]
 
-[["taxonomies.terms"]]
-Term = "22/23 T3"
-
-[["taxonomies.terms"]]
-Term = "22/23 awiodaw"
 +++
 {% note(type="primary", icon="heart-fill") %}test body
 
