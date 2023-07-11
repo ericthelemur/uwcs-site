@@ -1,6 +1,6 @@
 +++
 title = "Widget Test #3"
-date = "11 July 2023"
+date = "2023-07-11"
 
 [taxonomies]
 categories = ["Newsletter", "Test"]

@@ -26,14 +26,19 @@
     
       render: function() {
         const separator = this.props.field.get('separator', ', ');
+        const existing = this.props.field.get("existing", []);
+        console.log(existing);
         var value = this.props.value;
-        return h('input', {
-          id: this.props.forID,
-          className: this.props.classNameWrapper,
-          type: 'text',
-          value: value ? value.join(separator) : '',
-          onChange: this.handleChange,
-        });
+        return h("div", {}, [
+          h('input', {
+            id: this.props.forID,
+            className: this.props.classNameWrapper,
+            type: 'text',
+            value: value ? value.join(separator) : '',
+            onChange: this.handleChange,
+          }),
+          h('p', {}, this.props.value.map(v => `${v} ${existing.includes(v.toLowerCase()) ? "✓" : "(NEW)"}`).join(separator))
+        ])
       },
     });
     
@@ -50,6 +55,7 @@
     var schema = {
       properties: {
         separator: { type: 'string' },
+        existing: { type: "array", items: { type: "string" } }
       },
     }
     
