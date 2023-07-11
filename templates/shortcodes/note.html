@@ -17,7 +17,6 @@ Can fit a longer body here!
 
 #}
 
-{% macro note(type, icon, body) %}
 {% if not type %}{% set type="primary" %}{% endif %}
 {% if not icon %}
     {% if type == "success" %}{% set icon="check-circle-fill" %}
@@ -31,4 +30,3 @@ Can fit a longer body here!
 <div class="alert alert-{{ type }}" role="alert">
   {% if icon != "none" %}<i class="bi bi-{{ icon }} me-2"></i>{% endif %}{{ body | markdown(inline=true) | safe }}
 </div>
-{% endmacro note %}
