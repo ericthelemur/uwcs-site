@@ -19,7 +19,7 @@ collections:
     {% raw %}slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md {% endraw %}
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "News Date", name: "date", widget: "date", format: "DD MMMM YYYY"}
+      - {label: "News Date", name: "date", widget: "date", format: "DD MMMM YYYY", date_format: "YYYY-MM-DD"}
 
       - label: "Taxonomies"
         name: "taxonomies"
@@ -28,16 +28,12 @@ collections:
           - label: "Categories"
             name: "categories"
             widget: "categories"
+            default: ["Newsletter"]
 
           - label: "Term"
             name: "terms"
-            widget: "list"
-            fields: 
-            - label: "term"
-              name: Term
-              widget: string
-              pattern: ["[0-9]{2}/[0-9]{2}( T[0-4])?", "Format as '22/23 T2', term is optional"]
-              default: "22/23 T3"
+            widget: "categories"
+            default: ["22/23 T3"]
           
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "events" # Used in routes, e.g., /admin/collections/blog
