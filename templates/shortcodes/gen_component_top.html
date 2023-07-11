@@ -9,7 +9,7 @@ Arguments:
 
 
 <script>
-    const fields = [
+    var fields = [
       {% for comp in components %}
         {
           name: '{{ comp | lower }}',
@@ -29,10 +29,11 @@ Arguments:
         console.log("from block match", match);
         let args = match[4].split(/\s*,\s*/);
         console.log("from block args", args);
-        let data = { {% for comp in components %} "comp": "", {% endfor %} }
+        let data = { {% for comp in components %} "{{ comp }}": "", {% endfor %} }
         for (const val of args) {
+          if (val == "") continue;
           const spl = val.split(/\s*=\s*/);
-          data[spl[0]] = spl[1].replace(/^\"|\"$/);
+          data[spl[0]] = spl[1].replaceAll(/^\"|\"$/g, "");
         }
         if (match[6]) data["body"] = match[4];
         console.log("from block", data);

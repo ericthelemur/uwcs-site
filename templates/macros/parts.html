@@ -1,5 +1,14 @@
 {% import "macros/logos.html" as logos %}
 
+{% macro preview_styles() %}
+
+CMS.registerPreviewStyle("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700");
+CMS.registerPreviewStyle("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700");
+CMS.registerPreviewStyle("{{ config.base_url | safe }}/icon-packs/bootstrap-icons.min.css");
+CMS.registerPreviewStyle("{{ config.base_url | safe }}/style.css");
+
+{% endmacro preview_styles %}
+
 {% macro head() %}
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="icon" type="image/x-icon" href="{{ config.base_url | safe }}/assets/favicon.png">
@@ -7,7 +16,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700" rel="stylesheet">
 <script src="{{ config.base_url | safe }}/scripts/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/@phosphor-icons/web"></script>
 <link rel="stylesheet" href="{{ config.base_url | safe }}/icon-packs/bootstrap-icons.min.css">
 <script src="{{ config.base_url | safe }}/scripts/darkmode.js"></script>
 <link rel="stylesheet" href="{{ config.base_url | safe }}/style.css">
