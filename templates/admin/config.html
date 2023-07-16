@@ -2,7 +2,7 @@
 backend:
   name: github
   repo: ericthelemur/uwcs-site
-  base_url: http://86.130.201.19:9964
+  base_url: {{ config.extra.cms_auth_url | safe }}
   cms_label_prefix: "[CMS] "
 media_folder: "static/images"
 public_folder: "/images"
